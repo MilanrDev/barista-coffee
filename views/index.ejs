@@ -1,0 +1,70 @@
+<!-- Morning Challenge: A local coffee house is finally starting to take off ever since they introduced cold brew made from Kopi Luwak. They can’t handle their order volume and are starting to drop orders. Create an app that enables the cashier to enter the customer's name and their order. Then add that order to a queue that the baristas can see and give them the ability to mark an order complete. Completed orders should show which barista completed the order and have their own list. Bonus points if the app automatically says the customer's name out loud when an order is complete. -->
+
+
+<!doctype html>
+<html>
+
+<head>
+  <title>Coffee Order</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="top-butts">
+    <a href="/login" class="btn btn-default"></span>Login</a>
+    <a href="/signup" class="btn btn-default"></span>Create an Account</a>
+  </div>
+  <h1 class="title">Cafe Italia</h1>
+
+
+  <div class="container">
+    <div class="midSec text-center">
+      <!-- <img src="img/sticker.png" alt="Starbucks image"> -->
+    </div>
+  </div>
+
+  <section class="CashierContainer">
+    <div class="CashierTitle">
+      <h2>Welcome!
+      Enter Guest Order Below</h2>
+    </div>
+    <form class="CashierTitle" action="/messages" method="POST">
+      <input class="nameTwo" type="text" value="" placeholder="Enter customer name" name="name">
+      <h3>Drink Order</h3>
+      <select class="orderTwo" placeholder="Drink Order" name="order">
+        <option value="Milano Swirl">Milano Swirl</option>
+        <option value="Florence Shake">Florence Shake</option>
+        <option value="Napels Fiz">Napels FIz</option>
+        <option value="Verona Breeze">Verona Breeze</option>
+        <option value="Rome en Caramel ">Rome en Caramel</option>
+        <option value="Pisa Smoothie">Pisa Smoothie</option>
+        <option value="Verona Breeze">Verona Breeze</option>
+        <option value="Rome en Caramel ">Rome en Caramel</option>
+        <option value="Pisa Smoothie">Pisa Smoothie</option>
+      </select>
+      <h3>Choose Size</h3>
+      <select id= "size" name="size">
+        <option value="Short">Short</option>
+        <option value="Tall">Tall</option>
+        <option value="Grande">Grande</option>
+        <option value="Venti">Venti</option>
+      </select>
+      <h3>Add a tastey treat</h3>
+      <select id= "treat" name="treat">
+        <option value="Cinnamon">Amore Crumb</option>
+        <option value="Pop">Caio</option>
+        <option value="Cannoli">Cannoli</option>
+        <option value="Yum Bread">Yum Yum </option>
+      </select>
+
+      <button class="submit" type="submit">Submit</button>
+      <h3></h3>
+    </form>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Barista Profile</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id ='profile'>
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1 class="profile">Profile Page</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+      <a href="/home" class="btn btn-default btn-sm">Home</a>
+
+    </div>
+
+    <div class="row">
+
+      <!-- LOCAL INFORMATION -->
+      <div class="col-sm-6">
+        <div class="well">
+          <h3>Completed Orders</h3>
+
+          <ul class="messages">
+            <% for(var i=0; i<messages.length; i++) {%>
+            <% if(messages[i].completed){ %>
+              <li class="message">
+                <p>Customer Name: <span class="orderItem done"><%= messages[i].name %></span></p>
+                <p>Customer Drink: <span class="orderItem done" ><%= messages[i].order %></span></p>
+                <p>Size: <span class="orderItem done"><%= messages[i].size %></span> </p>
+                <p>Treat: <span class="orderItem done"><%= messages[i].treat %></span></p>
+                <p>Barista: <span class="orderItem done"><%=messages[i].baristaName %></span> </p>
+              </li>
+            <% }} %>
+
+          </ul>
+
+
+
+        </div>
+      </div>
+      <div class="completed well">
+         <h3>Incoming Orders</h3>
+         <ul class="messages">
+           <% for(var i=0; i<messages.length; i++) {%>
+         <% if(!messages[i].completed) { %>
+     <li class="message">
+       <p>Customer Name: <span class="orderItem"><%= messages[i].name %></span></p>
+       <p>Customer Drink: <span class="orderItem" ><%= messages[i].order %></span></p>
+       <p>Size: <span class="orderItem"><%= messages[i].size %></span> </p>
+       <p>Treat: <span class="orderItem"><%= messages[i].treat %></span></p>
+
+     </li>
+     <% }} %>
+   </ul>
+
+
+      </div>
+
+    </div>
+    <span><i id="trash" class="fa fa-trash fa-3x" aria-hidden="true"></i></span>
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
